@@ -5,10 +5,11 @@ namespace hubipe\HuQrPayment\Iban;
 use hubipe\HuQrPayment\Exceptions\InvalidBbanException;
 use hubipe\HuQrPayment\Helper\ToStringIban;
 use hubipe\HuQrPayment\Helper\Utils;
-use hubipe\HuQrPayment\Iban\Validator\CompoundValidator;
-use hubipe\HuQrPayment\Iban\Validator\GenericIbanValidator;
 use hubipe\HuQrPayment\Iban\Validator\HungarianIbanValidator;
-use hubipe\HuQrPayment\Iban\Validator\ValidatorInterface;
+use Rikudou\Iban\Iban\IbanInterface;
+use Rikudou\Iban\Validator\CompoundValidator;
+use Rikudou\Iban\Validator\GenericIbanValidator;
+use Rikudou\Iban\Validator\ValidatorInterface;
 
 class HungarianBbanAdapter implements IbanInterface
 {

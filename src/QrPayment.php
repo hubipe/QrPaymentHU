@@ -10,10 +10,10 @@ use hubipe\HuQrPayment\Enums\Purpose;
 use hubipe\HuQrPayment\Exceptions\InvalidIbanException;
 use hubipe\HuQrPayment\Exceptions\InvalidOptionException;
 use hubipe\HuQrPayment\Helper\Utils;
-use hubipe\HuQrPayment\Iban\IBAN;
-use hubipe\HuQrPayment\Iban\IbanInterface;
 use InvalidArgumentException;
 use LogicException;
+use Rikudou\Iban\Iban\IBAN;
+use Rikudou\Iban\Iban\IbanInterface;
 use Rikudou\QrPayment\QrPaymentInterface;
 use Rikudou\QrPaymentQrCodeProvider\GetQrCodeTrait;
 
@@ -126,7 +126,7 @@ class QrPayment implements QrPaymentInterface
 			$configuration = new Configuration();
 		}
 		$this->iban = $iban;
-		$this->expiration = new \DateTimeImmutable('9999-12-31T23:59:59', new \DateTimeZone('Europe/Budapest'));
+		$this->dueDate = new \DateTimeImmutable('9999-12-31T23:59:59', new \DateTimeZone('Europe/Budapest'));
 		$this->configuration = $configuration;
 	}
 
@@ -247,7 +247,7 @@ class QrPayment implements QrPaymentInterface
 
 	public function getDueDate(): \DateTimeInterface
 	{
-		return $this->expiration;
+		return $this->dueDate;
 	}
 
 	/**
@@ -259,7 +259,7 @@ class QrPayment implements QrPaymentInterface
 		if ($dueDate instanceof \DateTime) {
 			$dueDate = \DateTimeImmutable::createFromMutable($dueDate);
 		}
-		$this->expiration = $dueDate;
+		$this->dueDate = $dueDate;
 		return $this;
 	}
 
@@ -427,8 +427,8 @@ class QrPayment implements QrPaymentInterface
 		$localTimeZone = new \DateTimeZone('Europe/Budapest');
 		$dueDate = sprintf(
 			'%s+%d',
-			$this->expiration->setTimezone($localTimeZone)->format('YmdHis'),
-			round($localTimeZone->getOffset($this->expiration) / 3600)
+			$this->dueDate->setTimezone($localTimeZone)->format('YmdHis'),
+			round($localTimeZone->getOffset($this->dueDate) / 3600)
 		);
 
 		$result = [];

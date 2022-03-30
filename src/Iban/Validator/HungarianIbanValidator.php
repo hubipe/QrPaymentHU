@@ -2,6 +2,8 @@
 
 namespace hubipe\HuQrPayment\Iban\Validator;
 
+use Rikudou\Iban\Validator\ValidatorInterface;
+
 /**
  * @see https://www.ecbs.org/Download/Tr201v3.9.pdf
  */
