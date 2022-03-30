@@ -1,0 +1,39 @@
+{
+	"name": "hubipe/huqrpayment",
+	"type": "library",
+	"description": "QR payment library for Hungary (according to the Magyar Nemzeti Bank standard version 001)",
+	"homepage": "https://github.com/hubipe/QrPaymentHU",
+	"keywords": [
+		"qr",
+		"payment",
+		"hungary"
+	],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Petr Hubík",
+			"homepage": "http://hubik.net"
+		}
+	],
+	"require": {
+		"php": "^7.3|^8.0",
+		"ext-mbstring": "*",
+		"rikudou/qr-payment-interface": "^1.0",
+		"rikudou/qr-payment-qr-code-provider": "^1.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"hubipe\\HuQrPayment\\": "src/"
+		}
+	},
+	"suggest": {
+		"endroid/qr-code": "For generating QR code image"
+	},
+	"require-dev": {
+		"endroid/qr-code": "^3.2",
+		"phpstan/phpstan": "^1.4"
+	},
+	"scripts": {
+		"phpstan": "phpstan analyse --level=8 src"
+	}
+}
