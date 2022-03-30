@@ -5,6 +5,8 @@ This library was copied and modified from the [rikudou's EU QR Payment](https://
 
 > See [the standard](https://www.mnb.hu/letoltes/qr-kod-utmutato-20190712-en.pdf)
 
+> See also QR code payment generator for [Czech](https://github.com/RikudouSage/QrPaymentCZ), [Slovak](https://github.com/RikudouSage/QrPaymentSK) or [European Union](https://github.com/RikudouSage/QrPaymentEU) accounts.
+
 ## Installation
 
 Via composer: `composer require hubipe/huqrpayment`
