@@ -47,9 +47,10 @@ This package already contains Adapter for Hungarian account numbers:
 ```php
 <?php
 
-use hubipe\HuQrPayment\Iban\HungarianBbanAdapter;use hubipe\HuQrPayment\QrPayment;
+use hubipe\HuQrPayment\QrPayment;
+use Rikudou\Iban\Iban\HungarianIbanAdapter;
 
-$payment = new QrPayment(new HungarianBbanAdapter('11773016-11111018-00000000'));
+$payment = new QrPayment(new HungarianIbanAdapter('11773016-11111018-00000000'));
 
 ```
 

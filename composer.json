@@ -18,7 +18,7 @@
 	"require": {
 		"php": "^7.3|^8.0",
 		"ext-mbstring": "*",
-		"rikudou/iban": "^1.1",
+		"rikudou/iban": "^1.2",
 		"rikudou/qr-payment-interface": "^1.1",
 		"rikudou/qr-payment-qr-code-provider": "^1.1"
 	},
