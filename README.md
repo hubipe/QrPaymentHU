@@ -76,13 +76,13 @@ $payment
     ->setCurrency('HUF')
     ->setDueDate(new DateTimeImmutable('+3 days'))
     ->setPaymentSituationIdentifier(Purpose::PURCHASE_SALE_OF_GOODS)
-   ->setRemittance('Payment for goods')
-   ->setShopId('SHOP1')
-   ->setMerchantDeviceId('Terminal 1')
-   ->setReceiptId('1234984657S')
-   ->setPayeeInternalId('Payee internal identification')
-   ->setLoyaltyId('GOLDEN_CUSOMER')
-   ->setNavVerificationCode('FXC4');
+    ->setRemittance('Payment for goods')
+    ->setShopId('SHOP1')
+    ->setMerchantDeviceId('Terminal 1')
+    ->setReceiptId('1234984657S')
+    ->setPayeeInternalId('Payee internal identification')
+    ->setLoyaltyId('GOLDEN_CUSTOMER')
+    ->setNavVerificationCode('FXC4');
 
 ```
 
