@@ -32,9 +32,9 @@
 	},
 	"require-dev": {
 		"endroid/qr-code": "^3.2",
-		"phpstan/phpstan": "^1.4"
+		"phpstan/phpstan": "^1.10"
 	},
 	"scripts": {
-		"phpstan": "phpstan analyse --level=8 src"
+		"phpstan": "phpstan analyse --configuration phpstan.neon"
 	}
 }

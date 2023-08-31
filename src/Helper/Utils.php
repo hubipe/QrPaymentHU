@@ -9,7 +9,7 @@ use ReflectionException;
 final class Utils
 {
     /**
-     * @var mixed[]
+     * @var array<string, array<string, mixed>>
      */
     private static $constants = [];
 
@@ -34,7 +34,7 @@ final class Utils
      *
      * @throws ReflectionException
      *
-     * @return mixed[]
+     * @return array<string, mixed>
      */
     public static function getConstants(string $class)
     {
