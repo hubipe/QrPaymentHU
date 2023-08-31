@@ -74,7 +74,7 @@ $payment
     ->setName('My company name')
     ->setAmount(53250)
     ->setCurrency('HUF')
-    ->setExpiration(new DateTimeImmutable('+3 days'))
+    ->setDueDate(new DateTimeImmutable('+3 days'))
     ->setPaymentSituationIdentifier(Purpose::PURCHASE_SALE_OF_GOODS)
    ->setRemittance('Payment for goods')
    ->setShopId('SHOP1')
